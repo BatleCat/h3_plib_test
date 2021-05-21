@@ -1,2 +1,6 @@
 
 *.flag
+
+firmware/h3_plib_test.X/build/
+firmware/h3_plib_test.X/debug/
+firmware/h3_plib_test.X/dist/
