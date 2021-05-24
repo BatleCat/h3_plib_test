@@ -105,6 +105,7 @@
         <itemPath>../src/config/default/default.mhc/GraphSettings.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/project.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/default/default.mhc/stdio.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/tmr1.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/uart2.yml</itemPath>
       </logicalFolder>

@@ -73,10 +73,6 @@
 #define SWITCH1_InterruptEnable()   (CNENBSET = (1<<12))
 #define SWITCH1_InterruptDisable()  (CNENBCLR = (1<<12))
 
-/*** Macros for SWITCH3 pin ***/
-#define SWITCH3_Get()               ((PORTB >> 14) & 0x1)
-#define SWITCH3_PIN                  GPIO_PIN_RB14
-
 
 // *****************************************************************************
 /* GPIO Port

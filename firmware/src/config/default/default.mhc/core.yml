@@ -411,6 +411,13 @@ children:
       - type: User
         attributes: {value: '0'}
   - type: String
+    attributes: {id: BSP_PIN_61_FUNCTION_NAME}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
+  - type: String
     attributes: {id: BSP_PIN_61_FUNCTION_TYPE}
     children:
     - type: Values
@@ -1021,7 +1028,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'true'}
+        attributes: {id: core, value: 'false'}
       - type: User
         attributes: {value: 'false'}
   - type: Boolean
@@ -1030,21 +1037,21 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'true'}
+        attributes: {id: core, value: 'false'}
   - type: String
     attributes: {id: EVIC_145_INTERRUPT_HANDLER}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: UART2_FAULT_InterruptHandler}
+        attributes: {id: core, value: UART2_FAULT_Handler}
   - type: Boolean
     attributes: {id: EVIC_146_ENABLE}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'true'}
+        attributes: {id: core, value: 'false'}
       - type: User
         attributes: {value: 'false'}
   - type: Boolean
@@ -1053,21 +1060,21 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'true'}
+        attributes: {id: core, value: 'false'}
   - type: String
     attributes: {id: EVIC_146_INTERRUPT_HANDLER}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: UART2_RX_InterruptHandler}
+        attributes: {id: core, value: UART2_RX_Handler}
   - type: Boolean
     attributes: {id: EVIC_147_ENABLE}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'true'}
+        attributes: {id: core, value: 'false'}
       - type: User
         attributes: {value: 'false'}
   - type: Boolean
@@ -1076,14 +1083,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'true'}
+        attributes: {id: core, value: 'false'}
   - type: String
     attributes: {id: EVIC_147_INTERRUPT_HANDLER}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: UART2_TX_InterruptHandler}
+        attributes: {id: core, value: UART2_TX_Handler}
   - type: Boolean
     attributes: {id: EVIC_188_ENABLE}
     children:
@@ -1744,7 +1751,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: uart2, value: 'true'}
+        attributes: {id: uart2, value: 'false'}
   - type: Boolean
     attributes: {id: UART2_FAULT_INTERRUPT_ENABLE_UPDATE}
     children:
@@ -1758,21 +1765,21 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: uart2, value: UART2_FAULT_InterruptHandler}
+        attributes: {id: uart2, value: UART2_FAULT_Handler}
   - type: Boolean
     attributes: {id: UART2_FAULT_INTERRUPT_HANDLER_LOCK}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: uart2, value: 'true'}
+        attributes: {id: uart2, value: 'false'}
   - type: Boolean
     attributes: {id: UART2_RX_INTERRUPT_ENABLE}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: uart2, value: 'true'}
+        attributes: {id: uart2, value: 'false'}
   - type: Boolean
     attributes: {id: UART2_RX_INTERRUPT_ENABLE_UPDATE}
     children:
@@ -1786,21 +1793,21 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: uart2, value: UART2_RX_InterruptHandler}
+        attributes: {id: uart2, value: UART2_RX_Handler}
   - type: Boolean
     attributes: {id: UART2_RX_INTERRUPT_HANDLER_LOCK}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: uart2, value: 'true'}
+        attributes: {id: uart2, value: 'false'}
   - type: Boolean
     attributes: {id: UART2_TX_INTERRUPT_ENABLE}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: uart2, value: 'true'}
+        attributes: {id: uart2, value: 'false'}
   - type: Boolean
     attributes: {id: UART2_TX_INTERRUPT_ENABLE_UPDATE}
     children:
@@ -1814,14 +1821,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: uart2, value: UART2_TX_InterruptHandler}
+        attributes: {id: uart2, value: UART2_TX_Handler}
   - type: Boolean
     attributes: {id: UART2_TX_INTERRUPT_HANDLER_LOCK}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: uart2, value: 'true'}
+        attributes: {id: uart2, value: 'false'}
   - type: Integer
     attributes: {id: UART3_CLOCK_FREQUENCY}
     children:
