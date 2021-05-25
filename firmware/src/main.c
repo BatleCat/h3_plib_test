@@ -25,6 +25,7 @@
 #include <stddef.h>                     // Defines NULL
 #include <stdbool.h>                    // Defines true
 #include <stdlib.h>                     // Defines EXIT_FAILURE
+#include "device_cache.h"
 #include "definitions.h"                // SYS function prototypes
 // *****************************************************************************
 #define SWITCH_STATE_PRESSED 0
@@ -33,6 +34,7 @@
 volatile bool isTmr1Expired;
 volatile bool isUARTTxComplete;
 volatile bool changeTempSamplingRate;
+volatile char uartTxBuffer[256];
 // *****************************************************************************
 static void SW1_User_Handler(GPIO_PIN pin, uintptr_t context)
 {
@@ -94,7 +96,14 @@ int main ( void )
         if (changeTempSamplingRate)
         {
             changeTempSamplingRate = false;
+            sprintf((char*)uartTxBuffer, "Button is pressed, LED2 is toggled.\r\n");
             LED2_Toggle();
+
+            DCACHE_CLEAN_BY_ADDR((uint32_t)uartTxBuffer, sizeof(uartTxBuffer));
+            DMAC_ChannelTransfer(DMAC_CHANNEL_0, (const void *)uartTxBuffer, strlen((const char*)uartTxBuffer), (const void *)&U2TXREG, 1, 1);
+        }
+        if (isUARTTxComplete)
+        {
         }
         /* Maintain state machines of all polled MPLAB Harmony modules. */
         SYS_Tasks ( );
